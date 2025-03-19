@@ -1,0 +1,136 @@
+html, body {
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+#buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    min-width: 75px;  /* Default space */
+    min-height: 75px; /* Default space */
+    transition: min-width 0.3s, min-height 0.3s; /* Smooth size transition */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Style the anchor tag as a button */
+a {
+    display: inline-block;
+    /* Allow styling like a button */
+    width: 48px;
+    /* Make the link/button bigger */
+    height: 36px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+
+
+a:hover {
+    background-color: rgb(131, 131, 97);
+}
+
+.button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shortcut {
+    position: relative; /* This makes it a reference for absolute positioning */
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure it's above the button */
+}
+
+/* Style the input field */
+#siteNameInput {
+    width: 200px;
+    padding: 5px;
+    border: 2px solid #6a5acd; /* Soft purple border */
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Change border color when input is focused */
+#siteNameInput:focus {
+    border-color: #8a2be2; /* Brighter purple */
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+}
+
+/* Style the Add button */
+.buttonstyle {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #6a5acd, #8a2be2);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for button */
+.buttonstyle:hover {
+    background: linear-gradient(to right, #8a2be2, #6a5acd);
+    transform: scale(1.05);
+}
+
+/* Make sure the text inside input is visible */
+::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Initially hide elements */
+.hidden {
+    display: none; /* Completely hide the elements */
+    transition: opacity 0.3s ease; /* Optional: smooth transition */
+}
+
+/* Show when active */
+.visible {
+    display: inline-block; /* Change display to block or inline-block when visible */
+}
